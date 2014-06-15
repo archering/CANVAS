@@ -35,8 +35,9 @@ ctx.fillRect(50,50,75,50);
     g.prototype.beginFill = function (color,alpha) {
         var a = alpha || 1;
         if(a<=0) a = 0;
-        var rgb = window.hex2rgb(color);
+        var rgb = hex2rgb(color);
         this.fillStyle = 'rgba('+ rgb[0] + ',' + rgb[1] + ',' + rgb[2]+',' + a +')';
+        this.fill();
     };
     /**
     *@param {Number} thickness
@@ -57,6 +58,7 @@ miterLimit = value      miterLimit = max miterLength / lineWidth = 1 / sin ( min
         var rgb = hex2rgb(color);
         var a = alpha || 1;
         this.strokeStyle = 'rgba('+ rgb[0] + ',' + rgb[1] + ',' + rgb[2]+',' + a +')';
+        this.stroke();
     };
 
     /**
@@ -73,8 +75,6 @@ miterLimit = value      miterLimit = max miterLength / lineWidth = 1 / sin ( min
         this.lineTo((x+w),(y+h));
         this.lineTo(x,(y+h));
         this.closePath();
-        //this.fill();
-        this.stroke();
     };
 
     /**

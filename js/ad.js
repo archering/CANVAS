@@ -1,8 +1,9 @@
 (function(win){
     var pbox = document.getElementById("adplayer");
     var canvas = document.createElement("canvas");
-    canvas.width = 600;
-    canvas.height = 300;
+    canvas.width = "960";
+    canvas.height = "540";
+    canvas.id = "ad";
     pbox.insertBefore(canvas,pbox.firstChild);
     var g = canvas.getContext("2d");
     g.drawRect(0,0,400,300);

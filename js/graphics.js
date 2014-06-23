@@ -1,4 +1,4 @@
-(function(){
+;(function(){
     /**
     *@extension for the canvas api
     *@author:ericever
@@ -89,7 +89,22 @@
         this.lineTo(x,(y+h));
         this.closePath();
     };
-
+    /**
+    *
+    */
+    g.prototype.drawRoundRect = function (x,y,w,h,r) {
+         this.beginPath();
+         this.moveTo(x + r, y);
+         this.lineTo(x + width - r, y);
+         this.quadraticCurveTo(x + width, y, x + width, y + radius);
+         this.lineTo(x + width, y + height - r);
+         this.quadraticCurveTo(x + width, y + height, x + width - r, y+ height);
+         this.lineTo(x + r, y + height);
+         this.quadraticCurveTo(x, y + height, x, y + height - r);
+         this.lineTo(x, y + r);
+         this.quadraticCurveTo(x, y, x + r, y);
+         this.closePath();
+    };
     /**
     *draw circle;
     *
@@ -153,4 +168,4 @@
         }
     };
 
-})()
+}())Í

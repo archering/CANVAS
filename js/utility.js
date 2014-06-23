@@ -1,4 +1,4 @@
-(function(win){
+;(function(win){
     /**
     *
     *@param {Number} t ,how many times you want to repeat

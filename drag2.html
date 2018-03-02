@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canva 绘制图形的拖动</title>
+    <style>
+        canvas{
+            border:1px solid #ccc;
+            background:rgba(86, 196, 255, 0.28);
+        }
+    </style>
+</head>
+<body>
+   <p>
+   	Canvas只是一个dom节点，所有监听的事件都只能绑定在这个节点上，但是我们可能需要对Canvas上的某个元素进行操作。基本的原理就是事件还是绑定在Canvas上，通过判断点击发生的位置是否在Canvas中某个图形的路径内. 从而进一步确定是在哪个图形上戳来戳去
+   </p>
+    <canvas id="me" width="1000" height="600"></canvas>
+    <script src="js/drag2.js"></script>
+</body>
+</html>

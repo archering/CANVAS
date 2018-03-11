@@ -124,8 +124,13 @@ drawLine({x:200,y:600},{x:680,y:200});
 cross({x:680,y:200},200);
 
 var pos = arrow({x:200,y:600},{x:680,y:200},60,30);
+
+
 var pos2 = arrow({x:680,y:200},{x:200,y:600},60,30);
 fillArrow({x:pos2.x0,y:pos2.y0},{x:200,y:600},{x:pos2.x1,y:pos2.y1});
+
+
+
 extLine({x:pos.x0,y:pos.y0},{x:680,y:200},200);// 画延长线
 
 angleText({x:680,y:200},50,slope({x:pos.x0,y:pos.y0},{x:680,y:200}),30);// 画延长线 弧度表示
